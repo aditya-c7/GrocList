@@ -1,0 +1,223 @@
+.settings-page {
+    padding: var(--space-lg);
+    padding-bottom: calc(var(--nav-height) + var(--space-2xl));
+}
+
+.settings-header {
+    margin-bottom: var(--space-xl);
+}
+
+.settings-title {
+    font-size: var(--font-2xl);
+    font-weight: 700;
+}
+
+.settings-section {
+    margin-bottom: var(--space-xl);
+}
+
+.settings-section-title {
+    font-size: var(--font-xs);
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: var(--space-sm);
+    padding-left: var(--space-sm);
+}
+
+.settings-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.settings-user {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+}
+
+.settings-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-md);
+    font-weight: 600;
+    color: white;
+}
+
+.settings-user-name {
+    font-size: var(--font-md);
+    font-weight: 600;
+}
+
+.settings-user-email {
+    font-size: var(--font-sm);
+    color: var(--text-muted);
+}
+
+.settings-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-lg);
+    border-bottom: 1px solid var(--border);
+}
+
+.settings-row:last-child {
+    border-bottom: none;
+}
+
+.settings-row-info {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.settings-row-info svg {
+    color: var(--text-muted);
+    flex-shrink: 0;
+}
+
+.settings-row-label {
+    font-size: var(--font-base);
+    font-weight: 500;
+}
+
+.settings-row-desc {
+    font-size: var(--font-xs);
+    color: var(--text-muted);
+    margin-top: 1px;
+}
+
+/* Toggle */
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: var(--bg-elevated);
+    border-radius: 12px;
+    transition: background var(--transition-fast);
+}
+
+.toggle-slider::before {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: white;
+    transition: transform var(--transition-fast);
+}
+
+.toggle input:checked+.toggle-slider {
+    background: var(--accent);
+}
+
+.toggle input:checked+.toggle-slider::before {
+    transform: translateX(20px);
+}
+
+.settings-select {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-xs) var(--space-md);
+    color: var(--text-primary);
+    font-size: var(--font-sm);
+    outline: none;
+    cursor: pointer;
+}
+
+.settings-select:focus {
+    border-color: var(--accent-border);
+}
+
+.settings-select option {
+    background: var(--bg-secondary);
+}
+
+.settings-mini-btn {
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-md);
+    background: var(--accent-muted);
+    border: 1px solid var(--accent-border);
+    color: var(--accent);
+    font-size: var(--font-xs);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.settings-mini-btn:hover {
+    background: rgba(59, 130, 246, 0.18);
+}
+
+.settings-danger-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    width: 100%;
+    padding: var(--space-lg);
+    color: var(--error);
+    font-size: var(--font-base);
+    cursor: pointer;
+    transition: background var(--transition-fast);
+    border-bottom: 1px solid var(--border);
+}
+
+.settings-danger-btn:last-child {
+    border-bottom: none;
+}
+
+.settings-danger-btn:hover {
+    background: rgba(248, 81, 73, 0.04);
+}
+
+.settings-danger-btn.logout {
+    color: var(--text-secondary);
+}
+
+.settings-danger-btn.logout:hover {
+    background: var(--bg-tertiary);
+}
+
+.settings-footer {
+    text-align: center;
+    padding: var(--space-2xl) 0;
+    font-size: var(--font-xs);
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+    .settings-page {
+        max-width: 600px;
+        padding-bottom: var(--space-2xl);
+    }
+}

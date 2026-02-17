@@ -1,0 +1,295 @@
+.list-page {
+    padding: var(--space-lg);
+    padding-bottom: calc(var(--nav-height) + var(--space-2xl));
+}
+
+/* Header */
+.list-header {
+    margin-bottom: var(--space-lg);
+}
+
+.list-title {
+    font-size: var(--font-2xl);
+    font-weight: 700;
+}
+
+.list-subtitle {
+    font-size: var(--font-sm);
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+/* Mode Toggle */
+.mode-toggle-wrap {
+    display: flex;
+    gap: 0;
+    margin-bottom: var(--space-lg);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 3px;
+}
+
+.mode-btn {
+    flex: 1;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-sm);
+    font-weight: 500;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-align: center;
+}
+
+.mode-btn.active {
+    background: var(--accent);
+    color: white;
+}
+
+/* Empty state */
+.list-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-3xl) var(--space-lg);
+}
+
+.list-empty-icon {
+    font-size: 3rem;
+}
+
+.list-empty p {
+    font-size: var(--font-base);
+    color: var(--text-muted);
+}
+
+.list-empty .go-add-btn {
+    padding: var(--space-sm) var(--space-xl);
+    border-radius: var(--radius-md);
+    background: var(--accent);
+    color: white;
+    font-size: var(--font-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.list-empty .go-add-btn:hover {
+    background: var(--accent-hover);
+}
+
+/* Supermarket category sections */
+.list-category-section {
+    margin-bottom: var(--space-md);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-md) var(--space-lg);
+    cursor: pointer;
+    transition: background var(--transition-fast);
+}
+
+.category-header:hover {
+    background: var(--bg-tertiary);
+}
+
+.category-header-left {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-weight: 600;
+    font-size: var(--font-base);
+}
+
+.category-header-left .cat-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.category-count {
+    font-size: var(--font-xs);
+    color: var(--text-muted);
+    padding: 2px 8px;
+    background: var(--bg-surface);
+    border-radius: var(--radius-full);
+}
+
+.category-header .chevron {
+    transition: transform var(--transition-fast);
+    color: var(--text-muted);
+}
+
+.category-header .chevron.open {
+    transform: rotate(180deg);
+}
+
+.category-items-list {
+    border-top: 1px solid var(--border);
+}
+
+/* Simple list (kirana mode) */
+.simple-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.simple-list .list-item-row {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-sm);
+}
+
+/* List item row */
+.list-item-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: 1px solid var(--border);
+    transition: background var(--transition-fast);
+}
+
+.list-item-row:last-child {
+    border-bottom: none;
+}
+
+.list-item-row:hover {
+    background: var(--bg-tertiary);
+}
+
+.item-serial {
+    font-size: var(--font-xs);
+    color: var(--text-muted);
+    min-width: 18px;
+    font-weight: 500;
+}
+
+.item-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.item-name {
+    font-size: var(--font-base);
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.item-qty-display {
+    font-size: var(--font-sm);
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.item-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.item-action-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: var(--radius-md);
+    background: transparent;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    color: var(--text-muted);
+}
+
+.item-action-btn:hover {
+    background: var(--bg-surface);
+    color: var(--text-primary);
+    border-color: var(--border);
+}
+
+.item-action-btn.delete:hover {
+    background: rgba(248, 81, 73, 0.08);
+    color: var(--error);
+    border-color: rgba(248, 81, 73, 0.2);
+}
+
+/* Bottom Actions */
+.list-actions {
+    display: flex;
+    gap: var(--space-sm);
+    margin-top: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+.list-action-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-md);
+    font-size: var(--font-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.list-action-btn.primary {
+    background: var(--accent);
+    color: white;
+    border: none;
+}
+
+.list-action-btn.primary:hover {
+    background: var(--accent-hover);
+}
+
+.list-action-btn.secondary {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+}
+
+.list-action-btn.secondary:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.list-action-btn.danger {
+    background: transparent;
+    color: var(--error);
+    border: 1px solid rgba(248, 81, 73, 0.2);
+}
+
+.list-action-btn.danger:hover {
+    background: rgba(248, 81, 73, 0.08);
+}
+
+@media (min-width: 768px) {
+    .list-page {
+        padding-bottom: var(--space-2xl);
+    }
+
+    .simple-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-sm);
+    }
+
+    .simple-list .list-item-row {
+        margin-bottom: 0;
+    }
+}

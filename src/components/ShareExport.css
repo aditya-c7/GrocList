@@ -1,0 +1,127 @@
+.share-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-lg);
+    animation: fadeIn 120ms ease;
+}
+
+.share-sheet {
+    width: 100%;
+    max-width: 420px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    max-height: 85dvh;
+    overflow-y: auto;
+    animation: slideUp 200ms ease;
+}
+
+.share-title {
+    font-size: var(--font-lg);
+    font-weight: 600;
+    text-align: center;
+}
+
+.share-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: var(--font-sm);
+    margin-top: -8px;
+}
+
+.share-preview {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+.share-preview pre {
+    font-family: var(--font-family);
+    font-size: var(--font-xs);
+    white-space: pre-wrap;
+    word-break: break-word;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.share-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+}
+
+.share-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-lg) var(--space-md);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-size: var(--font-sm);
+    font-weight: 500;
+}
+
+.share-btn span:first-child {
+    font-size: 1.3rem;
+}
+
+.share-btn.copy {
+    background: var(--accent-muted);
+    border: 1px solid var(--accent-border);
+    color: var(--accent);
+}
+
+.share-btn.copy:hover {
+    background: rgba(59, 130, 246, 0.2);
+}
+
+.share-btn.whatsapp {
+    background: rgba(46, 160, 67, 0.1);
+    border: 1px solid rgba(46, 160, 67, 0.25);
+    color: var(--success);
+}
+
+.share-btn.whatsapp:hover {
+    background: rgba(46, 160, 67, 0.18);
+}
+
+.share-btn.pdf {
+    background: rgba(248, 81, 73, 0.08);
+    border: 1px solid rgba(248, 81, 73, 0.2);
+    color: var(--error);
+}
+
+.share-btn.pdf:hover {
+    background: rgba(248, 81, 73, 0.14);
+}
+
+.share-close {
+    width: 100%;
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-size: var(--font-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.share-close:hover {
+    background: var(--bg-elevated);
+    color: var(--text-primary);
+}

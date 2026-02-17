@@ -1,0 +1,68 @@
+.suggestion-card {
+    padding: var(--space-md);
+    margin: var(--space-sm) var(--space-md);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius-md);
+}
+
+.suggestion-text {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+}
+
+.suggestion-icon {
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.suggestion-text p {
+    font-size: var(--font-sm);
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.suggestion-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-sm);
+}
+
+.suggestion-item-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-full);
+    background: var(--accent-muted);
+    border: 1px solid var(--accent-border);
+    color: var(--text-primary);
+    font-size: var(--font-xs);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.suggestion-item-btn:hover {
+    background: rgba(59, 130, 246, 0.2);
+}
+
+.suggestion-add {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.suggestion-dismiss {
+    font-size: var(--font-xs);
+    color: var(--text-muted);
+    padding: var(--space-xs) var(--space-sm);
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+.suggestion-dismiss:hover {
+    color: var(--text-secondary);
+}
